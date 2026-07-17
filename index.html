@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Derrick Watson — IT QA Software Specialist</title>
+<meta name="description" content="Derrick Watson — IT QA Software Specialist with 7+ years testing enterprise, regulatory, and compliance-heavy platforms. Test planning, regression, Playwright automation, and UAT." />
+<meta name="author" content="Derrick Watson" />
+<meta name="theme-color" content="#0E1116" />
+<link rel="canonical" href="https://USERNAME.github.io/" />
+
+<!-- Social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Derrick Watson — IT QA Software Specialist" />
+<meta property="og:description" content="Software quality, verified before it ships. 7+ years testing enterprise and regulatory platforms." />
+<meta property="og:url" content="https://USERNAME.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Derrick Watson — IT QA Software Specialist" />
+<meta name="twitter:description" content="Software quality, verified before it ships. 7+ years testing enterprise and regulatory platforms." />
+
+<!-- Inline favicon: green check on dark, matches the pass/fail theme -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1116'/%3E%3Cpath d='M8 16.5l5 5 11-11' stroke='%233FB950' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0E1116; --panel:#161B22; --line:#272E38;
+    --text:#E6EDF3; --dim:#8B949E; --pass:#3FB950; --amber:#D29922;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+    --sans:'Inter',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+
+  .topbar{border-bottom:1px solid var(--line);padding:10px 24px;display:flex;
+    justify-content:space-between;align-items:center;font-family:var(--mono);
+    font-size:12px;color:var(--dim);position:sticky;top:0;
+    background:rgba(14,17,22,.93);backdrop-filter:blur(8px);z-index:10;}
+  .topbar .nav{display:flex;gap:18px;}
+  .ts-link{position:relative;}
+  .ts-link::after{content:'';position:absolute;left:0;bottom:-2px;width:100%;
+    height:1px;background:var(--pass);transform:scaleX(0);transform-origin:left;
+    transition:transform .25s ease;}
+  .ts-link:hover::after{transform:scaleX(1);}
+
+  header.hero{max-width:1000px;margin:0 auto;padding:90px 24px 70px;}
+  .kw{font-family:var(--mono);font-size:13px;color:var(--dim);
+    letter-spacing:.1em;margin-bottom:20px;}
+  .kw b{color:var(--pass);font-weight:400;}
+  .hero h1{font-size:68px;line-height:1.02;font-weight:700;margin-bottom:24px;
+    letter-spacing:-.02em;}
+  .hero h1 span{color:var(--dim);}
+  .lede{max-width:560px;color:var(--dim);font-size:17px;line-height:1.6;margin-bottom:40px;}
+  .stats{display:flex;gap:36px;flex-wrap:wrap;align-items:flex-end;
+    border-top:1px solid var(--line);padding-top:28px;}
+  .stat .big{font-family:var(--mono);font-size:52px;font-weight:700;line-height:1;}
+  .stat .big.pass{color:var(--pass);}
+  .stat .lbl{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px;}
+
+  section{max-width:1000px;margin:0 auto;padding:0 24px 80px;}
+  .seclabel{font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--dim);margin-bottom:22px;
+    display:flex;align-items:center;gap:12px;}
+  .seclabel .mk{color:var(--pass);}
+
+  .specgrid{display:grid;grid-template-columns:1fr 1fr;
+    border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  .spec{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 24px;}
+  .spec .head{display:flex;gap:12px;align-items:baseline;margin-bottom:10px;}
+  .spec .id{font-family:var(--mono);font-size:13px;color:var(--dim);transition:color .2s;}
+  .spec:hover .id{color:var(--pass);}
+  .spec h3{font-size:17px;font-weight:600;}
+  .spec p{color:var(--dim);font-size:14px;line-height:1.6;padding-left:25px;}
+
+  .assert{border:1px solid var(--line);border-radius:4px;background:var(--panel);
+    padding:22px 24px;margin-bottom:14px;transition:border-color .2s,background .2s;}
+  .assert:hover{border-color:rgba(63,185,80,.4);background:#1B222B;}
+  .assert .grid{display:grid;grid-template-columns:230px 1fr;gap:24px;}
+  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+    border-radius:2px;padding:3px 8px;display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:6px;height:6px;border-radius:50%;}
+  .chip.pass{color:var(--pass);border:1px solid rgba(63,185,80,.33);}
+  .chip.pass .dot{background:var(--pass);}
+  .chip.run{color:var(--amber);border:1px solid rgba(210,153,34,.33);}
+  .chip.run .dot{background:var(--amber);box-shadow:0 0 8px var(--amber);}
+  .co{font-size:18px;font-weight:700;margin-top:14px;}
+  .loc{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:4px;}
+  .role{font-size:14px;margin-top:12px;}
+  .span{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:4px;}
+  .assert ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .assert li{display:flex;gap:10px;color:var(--dim);font-size:14px;line-height:1.5;}
+  .assert li .ck{color:var(--pass);font-family:var(--mono);flex-shrink:0;}
+
+  .certgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cert{border:1px solid var(--line);border-radius:4px;padding:20px;background:var(--panel);}
+  .cert .v{font-family:var(--mono);font-size:11px;color:var(--pass);margin-bottom:10px;}
+  .cert .t{font-size:15px;font-weight:600;line-height:1.3;}
+  .cert .s{font-size:13px;color:var(--dim);margin-top:6px;}
+  .edu{font-family:var(--mono);font-size:13px;color:var(--dim);margin-top:32px;}
+
+  .cta{border:1px solid var(--line);border-radius:4px;padding:40px 32px;
+    background:var(--panel);text-align:center;}
+  .cta .ok{font-family:var(--mono);font-size:13px;color:var(--pass);margin-bottom:16px;}
+  .cta h2{font-size:30px;font-weight:700;margin-bottom:24px;}
+  .cta .links{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;
+    font-family:var(--mono);font-size:14px;}
+  .closer{font-family:var(--mono);font-size:13px;color:var(--dim);margin-top:28px;}
+
+  footer{border-top:1px solid var(--line);padding:20px 24px;font-family:var(--mono);
+    font-size:12px;color:var(--dim);text-align:center;}
+
+  :focus-visible{outline:2px solid var(--pass);outline-offset:2px;}
+  @media (max-width:760px){
+    .assert .grid{grid-template-columns:1fr;}
+    .hero h1{font-size:44px;}
+    .specgrid,.certgrid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span>watson.derrick — portfolio.spec.js</span>
+    <span class="nav">
+      <a class="ts-link" href="#experience">experience</a>
+      <a class="ts-link" href="#contact">contact</a>
+      <span style="color:var(--pass)">● all passing</span>
+    </span>
+  </div>
+
+  <header class="hero">
+    <div class="kw">describe(<b>'Derrick Watson'</b>, () =&gt; {</div>
+    <h1>Software quality,<br /><span>verified before it ships.</span></h1>
+    <p class="lede">IT QA Software Specialist with hands-on experience testing enterprise,
+      regulatory, and compliance-heavy platforms. Test planning, regression,
+      automation, and the documentation that makes a release defensible.</p>
+    <div class="stats">
+      <div class="stat"><div class="big pass" id="counter">0</div><div class="lbl">cases passing / 0 failing</div></div>
+      <div class="stat"><div class="big">7+</div><div class="lbl">years in QA</div></div>
+      <div class="stat"><div class="big">100%</div><div class="lbl">release coverage</div></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="seclabel"><span class="mk">▸</span>specs under test</div>
+    <div class="specgrid" id="specgrid"></div>
+  </section>
+
+  <section id="experience">
+    <div class="seclabel"><span class="mk">▸</span>assertions — work history</div>
+    <div id="assertions"></div>
+  </section>
+
+  <section>
+    <div class="seclabel"><span class="mk">▸</span>verified credentials</div>
+    <div class="certgrid" id="certgrid"></div>
+    <div class="edu">// BBA, Management Information Systems — University of Mississippi, Dec 2008</div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <div class="ok">✓ all suites passed — ready for next release</div>
+      <h2>Let's talk QA.</h2>
+      <div class="links">
+        <a class="ts-link" href="mailto:watson.derrick@outlook.com">watson.derrick@outlook.com</a>
+        <a class="ts-link" href="tel:6626141339">(662) 614-1339</a>
+        <a class="ts-link" href="https://www.linkedin.com/in/derrick-watson-watson" target="_blank" rel="noreferrer">linkedin</a>
+      </div>
+    </div>
+    <div class="closer">});</div>
+  </section>
+
+  <footer>Derrick Watson · Horn Lake, MS · QA portfolio</footer>
+
+<script>
+  const SPECS = [
+    ["01","Test planning & case development","Builds test plans and cases from requirements, mapping coverage to acceptance criteria before a line of code ships."],
+    ["02","Regression & UAT","Runs regression cycles and supports user acceptance testing for enterprise and regulatory platforms."],
+    ["03","Defect tracking & root cause","Documents defects with clear repro steps and drives them to resolution across testing cycles."],
+    ["04","Automation — Playwright","Validates automated results and expands automation coverage alongside the engineering team."],
+    ["05","AI-assisted QA","Uses Copilot and generative tools to accelerate case creation, surface edge cases, and sharpen documentation."],
+    ["06","Accessibility & compliance","Tests for accessibility and verifies releases meet functional and compliance requirements."],
+  ];
+  const ASSERTIONS = [
+    {co:"Sedgwick",loc:"Memphis, TN",role:"IT QA Software Specialist",span:"Jul 2023 — Present",status:"RUNNING",points:[
+      "Validate complex systems including OSHA reporting and regulatory platforms.",
+      "Support Playwright automation — validating results and expanding coverage.",
+      "Use AI tools to accelerate case creation and improve test coverage.",
+      "Improve traceability and overall QA process consistency."]},
+    {co:"Sedgwick",loc:"Memphis, TN",role:"IT QA Software Technician",span:"Jul 2021 — Jul 2023",status:"PASS",points:[
+      "Performed functional and regression testing for enterprise systems.",
+      "Supported user acceptance testing and production validation.",
+      "Partnered with development teams to ensure high-quality releases."]},
+    {co:"Sedgwick",loc:"Memphis, TN",role:"IT Applications Associate → Trainee",span:"Sep 2018 — Jul 2021",status:"PASS",points:[
+      "Documented test cases, results, and defects.",
+      "Supported QA process improvements and system reliability.",
+      "Built hands-on grounding in SDLC and software validation."]},
+    {co:"Regions Bank",loc:"Memphis, TN",role:"Financial Service Specialist",span:"Nov 2016 — Sep 2018",status:"PASS",points:[
+      "Resolved customer issues through direct action and referral.",
+      "Cross-sold appropriate products to new and existing customers.",
+      "Maintained accuracy and compliance in daily operations."]},
+    {co:"Walgreens",loc:"MS / TN",role:"Certified Assistant Store Manager",span:"Sep 2010 — Nov 2016",status:"PASS",points:[
+      "Supervised a team of 15+ in a high-volume retail environment.",
+      "Managed staffing, scheduling, inventory, and service performance.",
+      "Trained and coached new employees on procedures and standards."]},
+  ];
+  const CERTS = [
+    ["CompTIA Project+","Quality Management — Sedgwick"],
+    ["Certified Pharmacy Technician (CPhT)","Walgreens"],
+    ["West TN Hall of Fame","Regions, Q1 2017"],
+  ];
+
+  const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+  document.getElementById("specgrid").innerHTML = SPECS.map(([id,title,detail])=>`
+    <div class="spec">
+      <div class="head"><span class="id">${id}</span><h3>${esc(title)}</h3></div>
+      <p>${esc(detail)}</p>
+    </div>`).join("");
+
+  document.getElementById("assertions").innerHTML = ASSERTIONS.map(a=>{
+    const chip = a.status==="RUNNING"
+      ? `<span class="chip run"><span class="dot"></span>RUNNING</span>`
+      : `<span class="chip pass"><span class="dot"></span>PASS</span>`;
+    const pts = a.points.map(p=>`<li><span class="ck">✓</span><span>${esc(p)}</span></li>`).join("");
+    return `<div class="assert"><div class="grid">
+      <div>${chip}<div class="co">${esc(a.co)}</div>
+        <div class="loc">${esc(a.loc)}</div>
+        <div class="role">${esc(a.role)}</div>
+        <div class="span">${esc(a.span)}</div></div>
+      <ul>${pts}</ul></div></div>`;
+  }).join("");
+
+  document.getElementById("certgrid").innerHTML = CERTS.map(([t,sub])=>`
+    <div class="cert"><div class="v">✓ VERIFIED</div>
+      <div class="t">${esc(t)}</div><div class="s">${esc(sub)}</div></div>`).join("");
+
+  // animated counter
+  (function(){
+    const el = document.getElementById("counter");
+    const total = 247;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches){ el.textContent = total; return; }
+    const dur = 1100; const start = performance.now();
+    function tick(now){
+      const p = Math.min((now-start)/dur,1);
+      const eased = 1 - Math.pow(1-p,3);
+      el.textContent = Math.round(eased*total);
+      if(p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+</script>
+</body>
+</html>
